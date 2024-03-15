@@ -1,0 +1,160 @@
+#root {
+  margin: 0 auto;
+  padding: 1rem;
+  text-align: center;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    list-style-type: none;
+    text-align: left;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 90vh;
+    background-image: url('/bg.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.container::before {
+    z-index: 0;
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: black;
+    opacity: 0.8;
+}
+
+.channel-guide {
+    background-color: #121212;
+    position: absolute;
+    bottom: 0;
+    max-height: 50vh;
+    max-width: 99vw;
+    overflow: scroll;
+    scrollbar-width: none;
+}
+
+.channel-guide::-webkit-scrollbar {
+    display: none;
+}
+
+.channels {
+    display: flex;
+    flex-direction: column;
+}
+
+.channel-guide ul li {
+    display: flex;
+}
+
+.channel-info {
+    display: flex;
+    align-items: center;
+    background-color: #121212;
+    border: 10px solid black;
+    position: sticky;
+    left: 0;
+}
+
+.channel-number {
+    font-size: 2rem;
+    margin-left: 20px;
+    width: 30px;
+}
+
+.channel-img img {
+    transform: scale(0.7);
+    width: 180px;
+}
+
+.program-info {
+    display: flex;
+    flex-direction: row;
+}
+
+.program {
+    border: 0.5px solid grey;
+    width: 200px;
+    height: 126px;
+    text-align: center;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+
+.program:hover {
+    background-color: gray;
+}
+
+.hidden {
+    display: none;
+}
+
+.card-info {
+    position: absolute;
+    left: 5%;
+    top: 10%;
+    font-size: 1.5rem;
+    text-align: left;
+    max-width: 600px;
+    white-space: pre-line;
+}
+
+.card-info-time {
+    font-size: 1rem;
+}
+
+.timestamp {
+    width: 270%;
+    background-color: #121212;
+    padding: 10px 0;
+    font-weight: bold;
+    display: flex;
+    position: sticky;
+    top: 0;
+
+}
+
+.timestamp > * {
+    padding: 0 125px;
+}
+
+.show-button {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+
+}
+
+.hide-button {
+    z-index: 1;
+    position: absolute;
+    top: 3%;
+    right: 3%;
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+.button-container {
+    z-index: 1;
+    position: absolute;
+    top: 44.5%;
+    right: 1%;
+    cursor: pointer;
+}
+
+.button-container button {
+    margin: 0 5px;
+}
