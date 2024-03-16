@@ -23,7 +23,7 @@ function App() {
   useEffect(() => {
     try {
       const getChannels = async () => {
-        const response = await fetch('https://mfwkweb-api.clarovideo.net/services/epg/channel?device_id=web&device_category=web&device_model=web&device_type=web&device_so=Chrome&format=json&device_manufacturer=generic&authpn=webclient&authpt=tfg1h3j4k6fd7&api_version=v5.93&region=guatemala&HKS=web61144bb49d549&user_id=54343080&date_from=20240315180000&date_to=20240316160000&quantity=70')
+        const response = await fetch('https://mfwkweb-api.clarovideo.net/services/epg/channel?device_id=web&device_category=web&device_model=web&device_type=web&device_so=Chrome&format=json&device_manufacturer=generic&authpn=webclient&authpt=tfg1h3j4k6fd7&api_version=v5.93&region=guatemala&HKS=web61144bb49d549&user_id=54343080&date_from=20240315180000&date_to=20240316160000&quantity=50')
         const data = await response.json()
         setData(data.response.channels)
       }
@@ -47,8 +47,8 @@ function App() {
               {card && <div>{card}</div>}
             </div>
             <div className="button-container">
-              <button onClick={() => {handleHorizantalScroll(elementRef.current, 10, 200, -20);}}>‹</button>
-              <button onClick={() => {handleHorizantalScroll(elementRef.current, 10, 200, 20);}}>›</button>
+              <button onClick={() => {handleHorizantalScroll(elementRef.current, 10, 300, -20);}}>‹</button>
+              <button onClick={() => {handleHorizantalScroll(elementRef.current, 10, 300, 20);}}>›</button>
             </div>
             <div className='channel-guide' ref={elementRef}>
               <ul className='timestamp'>
