@@ -150,11 +150,11 @@ ul li {
 .button-container {
     z-index: 1;
     position: absolute;
-    top: 44%;
+    top: 44.5%;
     right: 1%;
     cursor: pointer;
 }
 
 .button-container button {
-    margin: 0 3px;
+    margin: 0 5px;
 }
